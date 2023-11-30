@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Термоснаб - главная страница</title>
+    <!-- иконка -->
+    <link rel="shortcut icon" href="../img/logotype.png" type="image/x-icon">
+    <!-- стили -->
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/registr.css">
+</head>
+<body>
+    <div class="logotypeDiv">
+        <img class="logotype" src="../img/logotype.png" alt="логотип ООО Термоснаб">
+    </div>
+    
+    <div class="header">
+        <nav>
+            <a href="../inedx.html">Главная</a>
+            <a href="./o_companii.php">О_компании</a>
+            <a href="./katalog.html">Каталог</a>
+            <a href="./dostavka.html">Доставка_и_оплата</a>
+            <a href="">Регистрация</a>
+            <a href="./kabinet.html">Кабинет</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="bottomInfoHead">
+            <p>Вы здесь: => <a href="../inedx.html">Главная страница</a> => Регистрация</p>
+            <p>Корзина</p>
+        </div>
+
+        <!-- регистрация, авторизация -->
+        <div class="container text-align-reg">
+            <form action="../php/registration.php" method="post">
+                <input type="name" class="form-inp" name="name" id="name" placeholder="Введите имя:"><br><br>
+                <input type="text" class="form-inp" name="login" id="login" placeholder="Придумайте логин:"><br><br>
+                <input type="password" class="form-inp" name="password" id="password" placeholder="Придумайте пароль:"><br><br>
+                <input type="submit" class="batton" value="Отправить">
+            </form>
+
+            <p>Если вы уже зарегистрированы, то <b><a href="./autorisasia.html">Войдите</a></b></p>
+        </div>
+    </div>
+
+    <!-- подвал футер -->
+    <footer>
+        <nav>
+            <a href="./inedx.html">Главная</a>
+            <a href="./page/o_companii.php">О_компании</a>
+            <a href="./page/katalog.html">Каталог</a>
+            <a href="./page/dostavka.html">Доставка_и_оплата</a>
+            <a href="">Регистрация</a>
+            <a href="./kabinet.html">Кабинет</a>
+        </nav>
+        <p>Все права защищены</p>
+        <p>© Kyvshianka Lay</p>
+    </footer>
+    
+    <!-- шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Comfortaa&family=Play:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- slider -->
+    <script src="./script/slider.js"></script>
+
+
+</body>
+</html>
