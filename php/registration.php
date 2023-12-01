@@ -72,7 +72,7 @@ if($count) {
 $mysql->close();
 
 // переход на страницу с авторизацией
-header('Location: ../page/autorisasia.html');
+header('Location: ../page/autorisasia.php');
 
 // прекращение выполнения кода
 exit();

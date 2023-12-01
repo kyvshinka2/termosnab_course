@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Термоснаб - Личный Кабинет</title>
+    <title>Термоснаб - Трубопровод</title>
     <!-- иконка -->
-    <link rel="shortcut icon" href="./img/logotype.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logotype.png" type="image/x-icon">
     <!-- стили -->
     <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/katalog.css">
 </head>
 <body>
     <!-- header -->
@@ -18,34 +19,17 @@
 
     <div class="content">
         <div class="bottomInfoHead">
-            <p>Вы здесь: => Главная страница</p>
+            <p>Вы здесь: => <a href="../inedx.php">Главная страница</a> => <a href="./katalog.php">Каталог</a> => Трубопровод </p>
             <p>Корзина</p>
         </div>
+        <br> 
 
-        <!-- кабинет -->
-        <h1>Здравствуйте, 
-            <?php
-                if(isset($_SESSION ['name'])) {
-                    echo $_SESSION ['name'];
-                } else {
-                    echo "Незнакомец";
-                }
-            ?>
-        </h1>
-        <!-- кнопка выхода с профиля -->
-        <?php
-            if(isset($_SESSION ['name'])) {
-                echo "<div class='exit'>
-                <a class='show' href='../php/exit.php'>Выйти</a>
-                </div>";
-            }
-        ?>
+        <!-- каталог -->
+        
 
-
-
-    </div>
-
-    <!-- footer -->
+    </div> 
+    <br>
+    <!-- подвал футер -->
     <?php
         require('../php/footer-page.php');
     ?>

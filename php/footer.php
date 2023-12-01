@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-    <div class="logotypeDiv">
-        <img class="logotype" src="./img/logotype.png" alt="логотип ООО Термоснаб">
-    </div>
-    
-    <div class="header">
+
+    <!-- подвал футер -->
+    <footer>
         <nav>
             <a href="./inedx.php">Главная</a>
             <a href="./page/o_companii.php">О_компании</a>
@@ -25,8 +23,10 @@
             <a href="./page/registrasia.php">Регистрация</a>
             <a href="./page/kabinet.php">Кабинет</a>
         </nav>
-    </div>
-
+        <p>Все права защищены</p>
+        <p>© Kyvshianka Lay</p>
+    </footer>
+    
 
 </body>
 </html>

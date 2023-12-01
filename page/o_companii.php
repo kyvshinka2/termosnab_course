@@ -11,24 +11,15 @@
     <link rel="stylesheet" href="../style/o_companii.css">
 </head>
 <body>
-    <div class="logotypeDiv">
-        <img class="logotype" src="../img/logotype.png" alt="логотип ООО Термоснаб">
-    </div>
-    
-    <div class="header">
-        <nav>
-            <a href="../inedx.html">Главная</a>
-            <a href="">О_компании</a>
-            <a href="">Каталог</a>
-            <a href="./dostavka.html">Доставка_и_оплата</a>
-            <a href="">Регистрация</a>
-            <a href="">Кабинет</a>
-        </nav>
-    </div>
+    <!-- header -->
+    <?php
+        session_start();
+        require('../php/header-page.php')
+    ?>
 
     <div class="content">
         <div class="bottomInfoHead">
-            <p>Вы здесь: => <a href="../inedx.html">Главная страница</a> => О компании</p>
+            <p>Вы здесь: => <a href="../inedx.php">Главная страница</a> => О компании</p>
             <p>Корзина</p>
         </div>
 
@@ -91,13 +82,19 @@
                 <h1>Поделитесь впечатлением :3</h1>
                 <!-- форма для заполнения -->
                 <form class="form" action="../php/otzav.php" method="post">
-                    <input type="text" class="form-inp" name="login" id="login" placeholder="Введите логин"><br><br>
-                    <input type="text" class="form-inp-2" name="content" id="content" placeholder="Введите отзыв"><br><br>
+                    <input type="text" class="form-inp" name="login" id="login" placeholder="Введите логин" minlength="3" maxlength="30"><br><br>
+                    <input type="text" class="form-inp-2" name="content" id="content" placeholder="Введите отзыв" minlength="3" maxlength="300"><br><br>
+                    <input type="number" class="form-inp-2" name="number" id="number" placeholder="Поставьте оценку: от 1 до 10" max="10"><br><br>
                     <input type="submit" class="batton" value="Отправить">
                 </form>
-            </div>
-            <div class="block-img">
-                <img src="../img/otzav.jpg" alt="Отзывы">
+                <p>
+                    <?php 
+                        session_start();
+                        if(isset($_SESSION['polePustoe'])) {
+                            echo $_SESSION['polePustoe'];
+                        }
+                    ?>
+                </p>
             </div>
         </div>
 
@@ -127,7 +124,7 @@
             <p>
                 <?php 
                     while ($row = mysqli_fetch_assoc($result2)) {
-                        echo "<b>".$row['Log_In']."</b> - ".$row['Number']."<br>";
+                        echo "<b>".$row['Log_In']."</b> - ".$row['Number']."/10 <br>";
                         echo $row['Comment']."<br>"."<br>";
                     }
 
@@ -138,18 +135,9 @@
     </div>
 
     <!-- подвал футер -->
-    <footer>
-        <nav>
-            <a href="./inedx.html">Главная</a>
-            <a href="./page/o_companii.html">О_компании</a>
-            <a href="">Каталог</a>
-            <a href="./page/dostavka.html">Доставка_и_оплата</a>
-            <a href="">Регистрация</a>
-            <a href="">Кабинет</a>
-        </nav>
-        <p>Все права защищены</p>
-        <p>© Kyvshianka Lay</p>
-    </footer>
+    <?php
+        require('../php/footer-page.php');
+    ?>
 
     
     <!-- шрифты -->
